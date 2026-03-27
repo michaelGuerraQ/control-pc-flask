@@ -17,13 +17,6 @@ Interfaz simple, rápida y funcional usando <b>Python + Flask</b>
 </p>
 
 ---
-
-<p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" width="120">
-</p>
-
----
-
 ## 📌 Descripción
 
 **Control PC Flask** es una aplicación web que te permite manejar tu computadora desde el navegador de tu celular, siempre que ambos estén conectados a la misma red WiFi.
