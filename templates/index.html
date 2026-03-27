@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Control PC</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>🎧 Control rápido</h1>
+  <div class="grid media">
+    <button onclick="act('prev')">⏮️ Anterior</button>
+    <button onclick="act('next')">⏭️ Siguiente</button>
+    <button onclick="act('playpause')" class="full ok">⏯️ Play / Pausa</button>
+    <button onclick="act('stop')">⏹️ Stop</button>
+    <button onclick="act('mute')">🔇 Mute</button>
+    <button onclick="act('volup')">🔊 Vol +</button>
+    <button onclick="act('voldown')">🔉 Vol −</button>
+    <button onclick="act('lock')" class="full">🔒 Bloquear</button>
+    <button onclick="act('shutdown')" class="full danger">⏻ Apagar</button>
+  </div>
+
+  <h1>🖱️ Touchpad</h1>
+  <div id="pad"></div>
+
+  <div class="row">
+    <button onclick="clickBtn('left')">👆 Clic Izq.</button>
+    <button onclick="clickBtn('right')">👉 Clic Der.</button>
+    <button onclick="scrollY(240)">🖱️⬆️ Scroll</button>
+    <button onclick="scrollY(-240)">🖱️⬇️ Scroll</button>
+  </div>
+
+  <p><small>Ambos equipos deben estar en la misma red. Permite Python en el Firewall (red privada).</small></p>
+
+  <script>
+    // pasa el token del backend al JS
+    window.REMOTE_TOKEN = "{{ token }}";
+  </script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
